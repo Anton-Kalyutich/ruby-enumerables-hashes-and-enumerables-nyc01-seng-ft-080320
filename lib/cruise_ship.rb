@@ -7,5 +7,6 @@
 # }
 
 def select_winner(passengers)
-  passengers.find {|suite, name| suite == :suite_a && name.start_with?("A")}.
+  winner = passengers.find {|suite, name| suite == :suite_a && name.start_with?("A")}
+  winner[:name]
 end
